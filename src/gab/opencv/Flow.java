@@ -51,8 +51,7 @@ public class Flow {
 	      flags = Video.OPTFLOW_USE_INITIAL_FLOW;
 	      hasFlow = true;
 	    }
-	    Video.calcOpticalFlowFarneback(prev, m, flow, pyramidScale, nLevels, windowSize, nIterations, polyN, polySigma, Video.OPTFLOW_FARNEBACK_GAUSSIAN);
-//	    Video.calcOpticalFlowFarneback(prev, m, flow, pyramidScale, nLevels, windowSize, nIterations, polyN, polySigma, flags);
+	    Video.calcOpticalFlowFarneback(prev, m, flow, pyramidScale, nLevels, windowSize, nIterations, polyN, polySigma, flags);
 	    prev = m.clone();
 	}
 
@@ -80,7 +79,7 @@ public class Flow {
 	}
 	  
 	public void draw() {
-	    int stepSize = 8;
+	    int stepSize = 4;
 
 	    for (int y = 0; y < flow.height(); y+=stepSize) {
 	      for (int x = 0; x < flow.width(); x+=stepSize) {
