@@ -62,7 +62,7 @@ void setup() {
   // Blobs list
   blobList = new ArrayList<Blob>();
   
-  size(840, 480, P2D);
+  size(840, 480);
   
   // Init Controls
   cp5 = new ControlP5(this);

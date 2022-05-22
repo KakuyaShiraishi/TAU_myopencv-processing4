@@ -9,7 +9,7 @@ void setup() {
   video = new Movie(this, "street.mov");
   opencv = new OpenCV(this, 720, 480);
   
-  opencv.startBackgroundSubtraction(5, 3, 0.5);
+  opencv.startBackgroundSubtraction(5, 3, false);
   
   video.loop();
   video.play();

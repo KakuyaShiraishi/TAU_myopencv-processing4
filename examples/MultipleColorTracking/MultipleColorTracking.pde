@@ -35,11 +35,11 @@ PImage[] outputs;
 int colorToChange = -1;
 
 void setup() {
-  video = new Capture(this, 640, 480);
+  video = new Capture(this, 640, 480, Capture.list()[1]);
   opencv = new OpenCV(this, video.width, video.height);
   contours = new ArrayList<Contour>();
   
-  size(830, 480, P2D);
+  size(830, 480);
   
   // Array for detection colors
   colors = new int[maxColors];
